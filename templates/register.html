@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+{% load crispy_forms_tags %}
+
+
+
+
+
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+  <h3>Kayıt Ol</h3>
+  <hr>
+  <form method = "post">
+
+    {% csrf_token %}
+
+    {{form|crispy}}
+
+    <input type="checkbox" name="tech" id="tech" >
+    <a  target = _blank href="{% url 'user:termscon' %}">Kullanım Sözleşmesi</a>'ni Okudum Kabul Ediyorum.
+    <br>
+    <br>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <div class="g-recaptcha" data-sitekey="6LfKmyoaAAAAAGvr7OY_H7ifFA04GKO5KNXZMvG0"></div>
+    <br>
+    <button  type = "submit" class = "btn btn-danger float-right">Kayıt Ol</button>
+</form>
+  
+  
+  
+  </div>
+</div>
+
+   
+   
+{% endblock body %}
+

@@ -1,0 +1,63 @@
+{% extends 'layout.html' %}
+
+
+{% block body %}
+
+<h3>Kontrol Paneli</h3>
+<hr>
+
+Hoşgeldin,<small>{{request.user.username}}</small>
+<hr>
+
+<a href="{% url 'article:addarticle' %}" class = "btn btn-danger"> Makale Ekle </a>
+
+<hr>
+{% if articles %}
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Başlık</th>
+      <th scope="col">Yazar</th>
+      <th scope="col">Tarih</th>
+      <th scope="col"></th>
+      <th scope="col">Güncelle</th>
+      
+      <th scope="col">Sil</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    {% for article in articles %}
+    <tr>
+      <th scope="row">{{article.id}}</th>
+      <td><a href="{% url 'article:detail' article.id %}">{{article.title}}</a></td>
+      <td>{{article.author.username}}</td>
+      <td>{{article.created_date}}<td>
+      <td><a href="{% url 'article:uptade' article.id %}" class = "btn btn-success"><i class="fa fa-cog"></i> Güncelle</a></td>
+      <td><a href="{% url 'article:delete' article.id %}" class = "btn btn-danger">Sil <i class="fas fa-trash-alt"></i></a></td>
+
+    </tr>
+
+
+    
+    {% endfor %}
+    {% comment %} <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr> {% endcomment %}
+    
+  </tbody>
+</table>
+{% else %}
+
+<div class = "alert alert-danger">
+    Henüz Bir Makaleniz Bulunamadı,Makale Oluşturmak İçin <a href="{% url 'article:addarticle' %}">Buraya Tıklayınız.</a>
+</div>
+
+{% endif %}
+
+{% endblock body %}
+

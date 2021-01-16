@@ -1,0 +1,96 @@
+{% extends 'layout.html' %}
+
+
+{% block body %}
+
+<div class="container">
+
+    <div class="row">
+
+      <!-- Post Content Column -->
+      <div class="col-lg-8">
+
+        <!-- Title -->
+        <h2 class="mt-4">{{article.title}}</h2>
+
+        <!-- Author -->
+        <p class="lead">
+          Yazar:
+          <a href="#">{{article.author.username}}</a>
+        </p>
+
+        <hr>
+
+        <!-- Date/Time -->
+        <p> Tarih: {{article.created_date}}</p>
+
+        <hr>
+
+        <!-- Preview Image -->
+        {% comment %} <img class="img-fluid rounded" src="http://placehold.it/900x300" alt=""> {% endcomment %}
+
+        
+
+        <!-- Preview Image -->
+        {% if article.article_image %}
+        <img class="img-fluid rounded" src="{{article.article_image.url}}" alt="">
+        
+        {% endif %}
+
+        <!-- Post Content -->
+        <p class = "lead">
+            {{article.content|safe}}
+        </p>
+
+        <h4>Yorumlar</h4>
+        <hr>
+        {% if comments %}
+        
+        {% for comment in comments %}
+        <div class="media mb-4">
+          <img class="d-flex mr-3 rounded-circle" src="https://muratselek.com.tr/wp-content/uploads/2019/01/yorum-icon-avatar-men-50x50.png" alt="">
+
+          <div class="media-body">
+            <h5 class="mt-0">{{comment.comment_author}}</h5>
+            {{comment.comment_date}} <br>
+            {{comment.comment_content}}
+          </div>
+        </div>
+        
+        {% endfor %}
+        
+        {% else %}
+        <div class = "alert alert-danger">Bu makaleye yorum yapılmamıştır.İlk yorumu yapan siz olun!</div>
+        {% endif %}
+
+
+        <div class="card my-4">
+          <h5 class="card-header">Yorum Ekle:</h5>
+          <div class="form-group">
+            
+          </div>
+            <form action = "{% url 'article:comment'  article.id %}" method = "post">
+              {% csrf_token %}
+            <div class = "form-group"></div>
+              <input  name = "comment_author" type="text"   class="form-control" id="formGroupExampleInput" placeholder = "İsiminizi Giriniz">
+              
+              <br>
+              <label for="formGroupExampleInput"></label>
+            
+              <div class="form-group">
+                <textarea name = "comment_content" class="form-control" rows="5" placeholder = "Yorumunuzu Ekleyiniz"></textarea>
+                
+              </div>
+              <button type="submit" class="btn btn-danger"  style = "float : right;">Ekle</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+     
+        
+    </div>
+
+    
+{% endblock body %}
+

@@ -1,0 +1,125 @@
+
+{% extends "layout.html" %}
+<head>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+
+
+
+{% block body %}
+<style>
+	.paddingTB60 {padding:60px 0px 60px 0px;}
+	.gray-bg {background: #F1F1F1 !important;}
+	.about-title {}
+	.about-title h1 {color: #535353; font-size:45px;font-weight:600;}
+	.about-title span {color: #AF0808; font-size:45px;font-weight:700;}
+	.about-title h3 {color: #535353; font-size:23px;margin-bottom:24px;}
+	.about-title p {color: #7a7a7a;line-height: 1.8;margin: 0 0 15px;}
+	.about-paddingB {padding-bottom: 12px;}
+	.about-img {padding-left: 57px;}
+	
+	/* Social Icons */
+	.col-lg-8{
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+
+		
+	}
+	.about-icons {margin:48px 0px 48px 0px ;}
+	.about-icons i{margin-right: 10px;padding: 0px; font-size:35px;color:#323232;box-shadow: 0 0 3px rgba(0, 0, 0, .2);}
+	.about-icons li {margin:0px;padding:0;display:inline-block;}
+	#social-fb:hover {color: #3B5998;transition:all .001s;}
+	 #social-tw:hover {color: #4099FF;transition:all .001s;}
+	 #social-gp:hover {color: #d34836;transition:all .001s;}
+	 #social-em:hover {color: #f39c12;transition:all .001s;}
+	</style>
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+            <div class="col-lg-8">
+                <h1>Hakkımızda</h1>
+				<hr>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi illo incidunt quae. Sequi aliquid, corrupti suscipit totam quam, possimus est consequatur veritatis distinctio, rem in fuga sit. Aperiam, maiores deleniti!lor
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo libero deleniti perferendis! Dignissimos accusamus excepturi quae culpa, illum expedita ut qui quasi sapiente non rerum temporibus magni, earum deserunt? Quos.
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit in maiores quia veritatis corporis recusandae unde, qui nemo assumenda consequuntur! Explicabo molestiae quod asperiores nemo totam recusandae repellendus doloremque ad?
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus dolore sequi et tenetur totam velit animi placeat ipsam, consectetur omnis, facere reprehenderit sunt necessitatibus ratione autem modi, ipsa nisi distinctio!
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa tempore corporis iure ea. Ducimus recusandae quae illo? Dicta doloremque molestiae quas rem soluta ut, iure labore dolorum autem optio in?
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis laudantium veniam enim dignissimos et qui molestiae, voluptates, accusantium at doloribus nostrum provident aperiam rerum aliquam. Odit fugit natus repellat accusamus.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci animi nulla dolorum mollitia dolor, qui, quae quos illo perspiciatis maiores molestias labore quis eum voluptas, sit iusto amet libero quia.
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam earum ad rem sit animi ducimus! Vel ex iure qui, aperiam veniam corrupti nesciunt dignissimos fugiat accusamus dolor architecto, corporis accusantium!
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perspiciatis optio doloribus reiciendis dolore rerum facere aut totam quod! Veritatis vero velit illum, vel sint aut odit quos quasi nemo!
+				</p>
+				
+				<footer>
+				<div class="about-icons" > 
+					<h1>İletişim</h1>
+					<hr>
+					<ul>
+						<li><a href="https://www.facebook.com/"><i id="social-fb" class="fa fa-facebook-square fa-3x social" ></i></a> </li>
+						<li><a href="https://twitter.com/batuhannbagg"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a> </li>
+						<li> <a href="https://mail.google.com/"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a> </li>
+						<li> <a href="mailto:batuhannbagg@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a> </li>
+						<li> <a href="https://github.com/batuhanbag"><i id="social-em" class="fab fa-github-square"></i></a> </li>
+						
+
+
+					</ul>
+				</div>
+				</footer>
+            </div>
+        </div>
+</div>
+
+		
+
+
+
+
+
+
+
+<!-- {% comment %} <div class="about-section paddingTB60 gray-bg">
+                <div class="container">
+                    <div class="row">
+						<div class="col-md-7 col-sm-6">
+							<div class="about-title clearfix">
+								<h1>About <span>Appmom</span></h1>
+								<h3>Lorem ipsum dolor sit amet </h3>
+								<p class="about-paddingB">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet dolor libero, eget venenatis mauris finibus dictum. Vestibulum quis elit eget neque porttitor congue non sit amet dolor. Proin pretium purus a lorem ornare </p>
+								<p>sed lobortis pulvinar. Integer laoreet mi id eros porta euismod. Suspendisse potenti. Nulla eros mauris, convallis et sem tempus, viverra hendrerit sapien</p>
+						<div class="about-icons"> 
+                            <ul >
+                                <li><a href="https://www.facebook.com/"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a> </li>
+                                <li><a href="https://twitter.com/"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a> </li>
+                                <li> <a href="https://plus.google.com/"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a> </li>
+                                <li> <a href="mailto:bootsnipp@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a> </li>
+                            </ul>       
+               
+               
+	           
+	           
+	        
+	        </div>
+							</div>
+						</div>
+						<div class="col-md-5 col-sm-6">
+							<div class="about-img">
+								<img src="https://devitems.com/preview/appmom/img/mobile/2.png" alt="">
+							</div>
+						</div>	
+                    </div>
+                </div>
+            </div> {% endcomment %} -->
+
+
+
+
+
+
+
+{% endblock body %}
+
